@@ -7,9 +7,9 @@
     flake-utils = {
       url = "github:numtide/flake-utils";
     };
-    neve = {
-      url = "github:redyf/Neve";
-    };
+    # neve = {
+    #   url = "github:redyf/Neve";
+    # };
   };
   outputs = { nixpkgs, flake-utils, neve, ... }: flake-utils.lib.eachDefaultSystem (system:
     let
