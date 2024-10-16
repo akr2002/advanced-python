@@ -11,7 +11,7 @@
     #   url = "github:redyf/Neve";
     # };
   };
-  outputs = { nixpkgs, flake-utils, neve, ... }: flake-utils.lib.eachDefaultSystem (system:
+  outputs = { nixpkgs, flake-utils, ... }: flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs {
         inherit system;
@@ -25,9 +25,12 @@
             jupyter
             jupyter-client
             jupytext
+            matplotlib
             numpy
             pandas
             pynvim
+            seaborn
+            scikit-learn
           ]))
         ];
         shellHook = "";
